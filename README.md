@@ -48,10 +48,10 @@ http://localhost:8080/students/update
 - body example:
 
 {
-		"ra": 1,
-		"name": "Paulo",
-		"email": "paulo@email.com",
-		"course": "ADS"
+	"ra": 1,
+	"name": "Paulo",
+	"email": "paulo@email.com",
+	"course": "ADS"
 }
 ```
 
