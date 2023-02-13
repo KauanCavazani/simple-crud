@@ -30,12 +30,19 @@ public class StudentService {
         return "student removed!";
     }
 
-    public Student updateStudent(Student student) {
-        Student existingStudent = repository.findById(student.getRa()).orElse(null);
-        existingStudent.setName(student.getName());
-        existingStudent.setEmail(student.getEmail());
-        existingStudent.setCourse(student.getCourse());
-        return repository.save(existingStudent);
+    public String updateStudent(int id, Student student) {
+        Student existingStudent = repository.findById(id).orElse(null);
+
+        if(existingStudent != null) {
+            existingStudent.setName(student.getName());
+            existingStudent.setEmail(student.getEmail());
+            existingStudent.setCourse(student.getCourse());
+            repository.save(existingStudent);
+            return "updated student";
+        } else {
+            return "student do not exist";
+        }
+
     }
 
 }
