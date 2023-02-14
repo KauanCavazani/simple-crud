@@ -43,12 +43,11 @@ http://localhost:8080/students/get-by-id/<id>
 PUT
 ```
 - update student:
-http://localhost:8080/students/update
+http://localhost:8080/students/update/<id>
 
 - body example:
 
 {
-	"ra": 1,
 	"name": "Paulo",
 	"email": "paulo@email.com",
 	"course": "ADS"
@@ -59,6 +58,9 @@ DELETE
 ```
 - delete by id:
 http://localhost:8080/students/delete-by-id/<id>
+
+-delete all:
+http://localhost:8080/students/delete-all
 ```
 
 
