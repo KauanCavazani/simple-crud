@@ -30,6 +30,11 @@ public class StudentService {
         return "student removed!";
     }
 
+    public String deleteAllStudents() {
+        repository.deleteAll();
+        return "all students deleted";
+    }
+
     public String updateStudent(int id, Student student) {
         Student existingStudent = repository.findById(id).orElse(null);
 
